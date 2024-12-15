@@ -66,8 +66,6 @@ class TransactionsPage {
           App.updateWidgets();
           App.updateForms();
           this.clear();
-        } else {
-          console.log(err)
         }
       });
     }
@@ -84,8 +82,6 @@ class TransactionsPage {
       Transaction.remove({id}, (err, response) => {
         if(response.success) {
           App.update()
-        } else {
-          console.log(err)
         }
       })
     }
@@ -106,16 +102,12 @@ class TransactionsPage {
     Account.get(this.lastOptions['account_id'], (err, response) => {
       if(response.success) {
         this.renderTitle(response.data.name) 
-      } else {
-        console.log(err)
       }
     });
 
     Transaction.list(this.lastOptions, (error, response) => {
       if(response.success) {
         this.renderTransactions(response.data)
-      } else {
-        console.log(error)
       }
     });
     

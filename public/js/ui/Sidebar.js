@@ -58,8 +58,6 @@ class Sidebar {
       User.logout((err, response) =>{
         if (response.success) {
           App.setState('init')
-        } else {
-          console.log(err);
         }
       })
     })

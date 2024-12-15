@@ -65,8 +65,6 @@ class AccountsWidget {
           [...response.data].forEach(item => {
             this.renderItem(item);
           })         
-        } else {
-          console.log(err)
         }
       })
     }

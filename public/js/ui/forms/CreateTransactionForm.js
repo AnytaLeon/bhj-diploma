@@ -33,8 +33,6 @@ class CreateTransactionForm extends AsyncForm {
           incomeAccountsList.insertAdjacentHTML('beforeEnd', option);
           expenseAccountsList.insertAdjacentHTML('beforeEnd', option)
         })
-      } else {
-        console.log(err)
       }
     })
   }
@@ -46,7 +44,7 @@ class CreateTransactionForm extends AsyncForm {
    * в котором находится форма
    * */
   onSubmit(data) {
-    Transaction.create(data, (error, response) => {
+    Transaction.create(data, (err, response) => {
       if(response.success) {
         this.element.reset();
         const incomeModal = App.getModal('newIncome');
@@ -54,8 +52,6 @@ class CreateTransactionForm extends AsyncForm {
         incomeModal.close();
         expenseModal.close();
         App.update()
-      } else {
-        console.log(error)
       }
     }) 
   }
