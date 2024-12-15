@@ -33,24 +33,29 @@
       "id": "3"
     },
     {
-      "name": "Наличные",
+      "name": "Подработка",
       "user_id": "dz130c22sm4bk0j02",
-      "id": "dz130cbc0m4boe8pe"
+      "id": "dz130c14wm4n1r4jn"
+    },
+    {
+      "name": "Копилка",
+      "user_id": "dz130c22sm4bk0j02",
+      "id": "dz130c1i4m4n2ssmi"
     },
     {
       "name": "Сбербанк",
       "user_id": "dz130c22sm4bk0j02",
-      "id": "dz130c564m4d2k0am"
+      "id": "dz130c6tsm4pu7no3"
     },
     {
-      "name": "Альфабанк",
+      "name": "Наличные",
       "user_id": "dz130c22sm4bk0j02",
-      "id": "dz130c4l8m4d2p2zz"
+      "id": "dz130c5rgm4pucizf"
     },
     {
-      "name": "Карман",
+      "name": "ВТБ",
       "user_id": "dz130c22sm4bk0j02",
-      "id": "dz130c6v0m4ebiwou"
+      "id": "dz130cugm4pumebo"
     }
   ],
   "transactions": [
@@ -188,6 +193,87 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "dz130c3o0m4puai6y",
+      "type": "income",
+      "name": "Зарплата",
+      "sum": 100000,
+      "account_id": "dz130c6tsm4pu7no3",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:47:52.473Z"
+    },
+    {
+      "id": "dz130c82cm4pub8r1",
+      "type": "income",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "dz130c14wm4n1r4jn",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:48:26.892Z"
+    },
+    {
+      "id": "dz130c83km4puc2j1",
+      "type": "income",
+      "name": "Копилка",
+      "sum": 1000,
+      "account_id": "dz130c1i4m4n2ssmi",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:49:05.484Z"
+    },
+    {
+      "id": "dz130c2k8m4pucdru",
+      "type": "expense",
+      "name": "Кофе",
+      "sum": 100,
+      "account_id": "dz130c14wm4n1r4jn",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:49:20.057Z"
+    },
+    {
+      "id": "dz130c1p4m4puct8x",
+      "type": "income",
+      "name": "Муж дал",
+      "sum": 5000,
+      "account_id": "dz130c5rgm4pucizf",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:49:40.112Z"
+    },
+    {
+      "id": "dz130c6e8m4pud405",
+      "type": "expense",
+      "name": "Пирожок",
+      "sum": 50,
+      "account_id": "dz130c5rgm4pucizf",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:49:54.052Z"
+    },
+    {
+      "id": "dz130c8dkm4pue1cu",
+      "type": "expense",
+      "name": "Мясо",
+      "sum": 1000,
+      "account_id": "dz130c6tsm4pu7no3",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:50:37.277Z"
+    },
+    {
+      "id": "dz130c41wm4pues83",
+      "type": "expense",
+      "name": "Овощи",
+      "sum": 500,
+      "account_id": "dz130c6tsm4pu7no3",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:51:12.098Z"
+    },
+    {
+      "id": "dz130c1ikm4pufav8",
+      "type": "expense",
+      "name": "Кредит",
+      "sum": 10000,
+      "account_id": "dz130c6tsm4pu7no3",
+      "user_id": "dz130c22sm4bk0j02",
+      "created_at": "2024-12-15T16:51:36.259Z"
     }
   ]
 }

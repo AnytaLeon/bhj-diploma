@@ -18,7 +18,6 @@ class AccountsWidget {
       throw new Error('Ошибка')
     };
     this.element = element;
-     
     
     this.registerEvents();
     this.update();
@@ -32,26 +31,21 @@ class AccountsWidget {
    * вызывает AccountsWidget.onSelectAccount()
    * */
   registerEvents() {
-    this.createAccountBtn = document.querySelector('.create-account');
 
-    this.createAccountBtn.addEventListener('click', (e) => {
+    this.element.addEventListener('click', (e) => {
       e.preventDefault();
-      const accountModal = App.getModal('createAccount'); 
-      accountModal.open();
-    });
 
-    //Не находятся счета таким образом. 
+      const createAccountBtn = e.target.closest('.create-account');
+      const account = e.target.closest('.account');
 
-    this.accounts = this.element.querySelectorAll('.account');
-
-    this.accounts.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.onSelectAccount(item)
-      })
+      if(createAccountBtn) {
+        const accountModal = App.getModal('createAccount'); 
+        accountModal.open();
+      } else if(account) {
+        this.onSelectAccount(account)
+      }
     })
   }
-
 
   /**
    * Метод доступен только авторизованным пользователям
@@ -97,14 +91,13 @@ class AccountsWidget {
    * счёта класс .active.
    * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
    * */
-  onSelectAccount( element ) {
-    this.accounts.forEach(item => {
-      item.classList.remove('active');    
-    });
-    element.classList.add('active');
-    console.log(element);
-    App.showPage( 'transactions', { account_id: `${element.id}`})
 
+  onSelectAccount(element) {
+    const activeAccount = document.querySelector('.active.account');
+    if (activeAccount) activeAccount.classList.remove('active');
+
+    element.classList.add('active');
+    App.showPage('transactions', { account_id: element.dataset.id });
   }
 
   /**
