@@ -184,10 +184,9 @@ class TransactionsPage {
    * */
   renderTransactions(data){
     const content = this.element.querySelector('.content');
-    content.innerHTML = '';
-
-    data.forEach(item => {
-      content.insertAdjacentHTML('beforeEnd', this.getTransactionHTML(item)) 
-    })
+    
+    content.innerHTML = data.reduce((acc, item) => 
+      acc + this.getTransactionHTML(item)
+      , '')
   }
 }
